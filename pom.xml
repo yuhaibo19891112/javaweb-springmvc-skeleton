@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>easy-skeleton</groupId>
-  <artifactId>com.easy</artifactId>
+  <groupId>com.easy</groupId>
+  <artifactId>easy-skeleton</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>com.easy Maven Webapp</name>
@@ -16,6 +16,15 @@
     <module>easy-web</module>
   </modules>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <easy.dal.version>1.0</easy.dal.version>
+    <essy.core.version>1.0</essy.core.version>
+    <easy.facade.version>1.0</easy.facade.version>
+    <easy.integration.version>1.0</easy.integration.version>
+    <spring.version>4.1.6.RELEASE</spring.version>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -25,6 +34,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>com.easy</finalName>
+    <finalName>easy-skeleton</finalName>
   </build>
 </project>
