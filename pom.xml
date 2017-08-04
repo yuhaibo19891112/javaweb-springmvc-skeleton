@@ -84,8 +84,27 @@
 
       <dependency>
         <groupId>org.springframework</groupId>
+        <artifactId>spring-context-support</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
         <artifactId>spring-test</artifactId>
         <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.freemarker</groupId>
+        <artifactId>freemarker</artifactId>
+        <version>2.3.22</version>
+      </dependency>
+
+      <!-- 模板继承、复写处理 -->
+      <dependency>
+        <groupId>com.googlecode.rapid-framework</groupId>
+        <artifactId>rapid-core</artifactId>
+        <version>4.0.5</version>
       </dependency>
 
       <dependency>
@@ -130,7 +149,33 @@
 
     </dependencies>
   </dependencyManagement>
+
   <build>
     <finalName>easy-skeleton</finalName>
   </build>
+
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <env>dev</env>
+        <logback.folder>/data/tomcat/logs</logback.folder>
+        <log.level>debug</log.level>
+        <ftl.update.delay>0</ftl.update.delay>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>prd</id>
+      <properties>
+        <env>prd</env>
+        <logback.folder>/data/test/tomcat/logs</logback.folder>
+        <log.level>error</log.level>
+        <ftl.update.delay>30</ftl.update.delay>
+      </properties>
+    </profile>
+  </profiles>
 </project>
