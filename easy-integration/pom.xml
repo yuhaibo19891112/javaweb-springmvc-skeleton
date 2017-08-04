@@ -9,8 +9,8 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>easy-skeleton</groupId>
+    <groupId>com.easy</groupId>
     <artifactId>easy-integration</artifactId>
-    <version>1.0</version>
+    <version>${easy.integration.version}</version>
 
 </project>

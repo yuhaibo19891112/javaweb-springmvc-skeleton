@@ -9,9 +9,9 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>easy-skeleton</groupId>
+    <groupId>com.easy</groupId>
     <artifactId>easy-facade</artifactId>
-    <version>1.0</version>
+    <version>${easy.facade.version}</version>
     <packaging>jar</packaging>
 
 </project>
