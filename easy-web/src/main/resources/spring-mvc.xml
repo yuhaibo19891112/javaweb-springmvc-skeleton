@@ -24,17 +24,19 @@
         <!-- 定义需要特殊处理的异常，用类名或完全路径名作为key，异常也页名作为值 -->
     </bean>
 
+    <!-- 配置文件载入spring容器 -->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath*:config/*.properties</value>
+            </list>
+        </property>
+    </bean>
+
     <!-- 文件上传支持 -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 
-    <bean id="jspViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/WEB-INF/jsp/" />
-        <property name="suffix" value=".jsp"/>
-        <property name="order" value="1"/>
-    </bean>
-
-    <!--<bean id="freemarkerSettings" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+    <bean id="freemarkerSettings" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="location" value="classpath:config/freemarker.properties"/>
     </bean>
 
@@ -53,7 +55,7 @@
         </property>
     </bean>
 
-    &lt;!&ndash; Freemarker模板集成指令 &ndash;&gt;
+    <!-- Freemarker模板集成指令 -->
     <bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
     <bean id="blockDirective" class="cn.org.rapid_framework.freemarker.directive.BlockDirective"/>
     <bean id="extendsDirective" class="cn.org.rapid_framework.freemarker.directive.ExtendsDirective"/>
@@ -69,5 +71,5 @@
         <property name="allowSessionOverride" value="true"/>
         <property name="exposeSessionAttributes" value="true"/>
         <property name="exposeSpringMacroHelpers" value="true"/>
-    </bean>-->
+    </bean>
 </beans>
