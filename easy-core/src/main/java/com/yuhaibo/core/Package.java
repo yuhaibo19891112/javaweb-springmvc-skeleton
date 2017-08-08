@@ -1,4 +1,4 @@
-package com.yuhaibo.web;
+package com.yuhaibo.core;
 
 /**
  * @Title:

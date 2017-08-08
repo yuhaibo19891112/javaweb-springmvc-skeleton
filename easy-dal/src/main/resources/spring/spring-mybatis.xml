@@ -33,11 +33,11 @@
         <property name="configLocation" value="classpath:config/mybatis-config.xml"/>
         <property name="mapperLocations" value="classpath*:mybatis/mappers/**/*.xml"/>
         <property name="dataSource" ref="dataSource"/>
-    </bean>
+    </bean>e
 
-    <bean class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="mapperInterface" value="com.easy.dal"/>
-        <property name="sqlSessionFactory" value="sqlSessionFactory"/>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.easy.dal"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
 </beans>
