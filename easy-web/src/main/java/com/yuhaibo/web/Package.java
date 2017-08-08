@@ -1,4 +1,4 @@
-package com.yuhaibo.core;
+package com.yuhaibo.web;
 
 
 public class Package {
