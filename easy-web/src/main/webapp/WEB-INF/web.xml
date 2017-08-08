@@ -9,7 +9,7 @@
 
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath*:application-context.xml</param-value>
+    <param-value>classpath*:spring/application-context.xml</param-value>
   </context-param>
 
   <!--编码拦截器-->
@@ -36,7 +36,7 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>classpath*:spring-mvc.xml</param-value>
+      <param-value>classpath*:spring/spring-mvc.xml</param-value>
     </init-param>
     <load-on-startup>0</load-on-startup>
   </servlet>
