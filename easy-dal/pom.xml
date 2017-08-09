@@ -46,10 +46,6 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <!--打包时排除资源文件 -->
-                <excludes>
-                    <exclude>**/config/**</exclude>
-                </excludes>
             </resource>
         </resources>
     </build>

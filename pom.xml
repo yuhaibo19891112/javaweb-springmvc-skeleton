@@ -184,7 +184,7 @@
       </activation>
       <properties>
         <env>dev</env>
-        <jdbc.url>jdbc:mysql://127.0.0.1:3306/vivoportal?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true</jdbc.url>
+        <jdbc.url>jdbc:mysql://127.0.0.1:3306/easy-skeleton?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true;</jdbc.url>
         <jdbc.username>root</jdbc.username>
         <jdbc.password>vivo</jdbc.password>
         <logback.folder>/data/tomcat/logs</logback.folder>
@@ -197,7 +197,7 @@
       <id>prd</id>
       <properties>
         <env>prd</env>
-        <jdbc.url>jdbc:mysql://127.0.0.1:3306/vivoportal?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true</jdbc.url>
+        <jdbc.url>jdbc:mysql://127.0.0.1:3306/easy-skeleton?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true;</jdbc.url>
         <jdbc.username>root</jdbc.username>
         <jdbc.password>vivo</jdbc.password>
         <logback.folder>/data/test/tomcat/logs</logback.folder>

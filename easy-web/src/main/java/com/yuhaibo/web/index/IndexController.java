@@ -1,7 +1,11 @@
 package com.yuhaibo.web.index;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.yuhaibo.core.user.model.User;
+import com.yuhaibo.core.user.service.UserService;
 
 /**
  * @Title:
@@ -13,8 +17,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
 
+    @Autowired
+    private UserService userService;
+
     @RequestMapping("/")
     public String index() {
+        User user = userService.getUserById(1);
         return "home/index";
     }
 

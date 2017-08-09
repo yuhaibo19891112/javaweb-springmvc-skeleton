@@ -1,8 +1,11 @@
 package com.easy.dal.user;
 
 
+import org.springframework.stereotype.Repository;
+
 import com.yuhaibo.core.user.model.User;
 
+@Repository
 public interface UserDao {
     int deleteByPrimaryKey(Integer id);
 
