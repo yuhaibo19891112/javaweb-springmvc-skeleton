@@ -1,6 +1,6 @@
 package com.yuhaibo.core.user.service;
 
-import com.yuhaibo.core.user.model.User;
+import com.easy.dal.user.model.User;
 
 /**
  * @Title:

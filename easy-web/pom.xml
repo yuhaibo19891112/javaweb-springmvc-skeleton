@@ -22,11 +22,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.easy</groupId>
-            <artifactId>easy-dal</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
         </dependency>

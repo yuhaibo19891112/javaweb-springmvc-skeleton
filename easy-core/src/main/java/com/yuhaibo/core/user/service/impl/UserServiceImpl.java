@@ -3,8 +3,8 @@ package com.yuhaibo.core.user.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.easy.dal.user.UserDao;
-import com.yuhaibo.core.user.model.User;
+import com.easy.dal.user.dao.UserDao;
+import com.easy.dal.user.model.User;
 import com.yuhaibo.core.user.service.UserService;
 
 /**

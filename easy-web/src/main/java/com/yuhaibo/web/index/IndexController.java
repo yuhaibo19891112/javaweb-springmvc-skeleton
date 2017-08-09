@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.yuhaibo.core.user.model.User;
+import com.easy.dal.user.model.User;
 import com.yuhaibo.core.user.service.UserService;
 
 /**

@@ -1,4 +1,4 @@
-package com.yuhaibo.core.user.model;
+package com.easy.dal.user.model;
 
 public class User {
     private Integer id;
