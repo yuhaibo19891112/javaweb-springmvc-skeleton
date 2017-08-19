@@ -23,7 +23,7 @@
     <easy.facade.version>1.0</easy.facade.version>
     <easy.integration.version>1.0</easy.integration.version>
     <spring.version>4.3.6.RELEASE</spring.version>
-    <junit.version>3.8.1</junit.version>
+    <junit.version>4.12</junit.version>
   </properties>
 
   <dependencyManagement>
@@ -184,9 +184,9 @@
       </activation>
       <properties>
         <env>dev</env>
-        <jdbc.url>jdbc:mysql://127.0.0.1:3306/easy-skeleton?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true;</jdbc.url>
+        <jdbc.url>jdbc:mysql://127.0.0.1:3306/easy-skeleton?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true</jdbc.url>
         <jdbc.username>root</jdbc.username>
-        <jdbc.password>vivo</jdbc.password>
+        <jdbc.password></jdbc.password>
         <logback.folder>/data/tomcat/logs</logback.folder>
         <log.level>debug</log.level>
         <ftl.update.delay>0</ftl.update.delay>
@@ -197,9 +197,9 @@
       <id>prd</id>
       <properties>
         <env>prd</env>
-        <jdbc.url>jdbc:mysql://127.0.0.1:3306/easy-skeleton?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true;</jdbc.url>
+        <jdbc.url>jdbc:mysql://127.0.0.1:3306/easy-skeleton?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true</jdbc.url>
         <jdbc.username>root</jdbc.username>
-        <jdbc.password>vivo</jdbc.password>
+        <jdbc.password></jdbc.password>
         <logback.folder>/data/test/tomcat/logs</logback.folder>
         <log.level>error</log.level>
         <ftl.update.delay>30</ftl.update.delay>
