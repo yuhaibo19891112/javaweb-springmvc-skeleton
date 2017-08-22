@@ -1,4 +1,4 @@
-package com.yuhaibo.test;
+package test;
 
 /**
  * @Title:

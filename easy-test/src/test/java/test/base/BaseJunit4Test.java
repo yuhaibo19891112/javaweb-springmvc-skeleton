@@ -4,7 +4,7 @@
  *@Company:Vivo----http://www.vivo.com.cn/
  * 
  */
-package com.yuhaibo.test.base;
+package test.base;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,13 +14,6 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * @Title:
- * @Description:
- * @Author:zhoufeng
- * @Since:2015年7月20日
- * @Version:1.0
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath*:spring/spring-test.xml")
 @Transactional
