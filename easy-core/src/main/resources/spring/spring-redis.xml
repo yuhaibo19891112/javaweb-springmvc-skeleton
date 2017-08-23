@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stringRedisSerializer" class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+    <bean id="jdkSerializationRedisSerializer" class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="${redis.pool.maxTotal}"/>
+        <property name="maxIdle" value="${redis.pool.maxIdle}"/>
+        <property name="maxWaitMillis" value="${redis.pool.maxWaitMillis}"/>
+        <property name="testOnBorrow" value="${redis.pool.testOnBorrow}"/>
+    </bean>
+
+    <!--redis slave 数据读取-->
+    <bean id="redisSlaveConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="hostName" value="${redis.host.read}"/>
+        <property name="poolConfig" ref="jedisPoolConfig"/>
+        <property name="port" value="${redis.port.read}"/>
+    </bean>
+    <bean id="redisTemplateSlave" class="org.springframework.data.redis.core.RedisTemplate">
+        <property name="connectionFactory" ref="redisSlaveConnectionFactory"/>
+        <property name="defaultSerializer" ref="stringRedisSerializer" />
+        <property name="keySerializer" ref="stringRedisSerializer" />
+        <property name="valueSerializer" ref="jdkSerializationRedisSerializer" />
+        <property name="hashValueSerializer" ref="jdkSerializationRedisSerializer" />
+    </bean>
+
+    <!--redis master 数据操作-->
+    <bean id="redisMasterConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <property name="hostName" value="${redis.host.write}"/>
+        <property name="poolConfig" ref="jedisPoolConfig"/>
+        <property name="port" value="${redis.port.write}"/>
+    </bean>
+    <bean id="redisTemplateMaster" class="org.springframework.data.redis.core.RedisTemplate">
+        <property name="connectionFactory" ref="redisMasterConnectionFactory"/>
+        <property name="defaultSerializer" ref="stringRedisSerializer" />
+        <property name="keySerializer" ref="stringRedisSerializer" />
+        <property name="valueSerializer" ref="jdkSerializationRedisSerializer" />
+        <property name="hashValueSerializer" ref="jdkSerializationRedisSerializer" />
+    </bean>
+
+    <!--session-->
+    <bean id="springSession" class="org.springframework.session.web.http.SessionRepositoryFilter">
+        <constructor-arg>
+            <bean class="org.springframework.session.data.redis.RedisOperationsSessionRepository">
+                <constructor-arg ref="redisMasterConnectionFactory"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+</beans>

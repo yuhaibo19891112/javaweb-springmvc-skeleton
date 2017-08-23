@@ -58,47 +58,58 @@
         <artifactId>spring-webmvc</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jdbc</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-aop</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context-support</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-test</artifactId>
         <version>${spring.version}</version>
+      </dependency>
+      <!--redis-->
+      <dependency>
+        <groupId>org.springframework.session</groupId>
+        <artifactId>spring-session-data-redis</artifactId>
+        <version>1.2.0.RELEASE</version>
       </dependency>
 
       <dependency>
         <groupId>org.freemarker</groupId>
         <artifactId>freemarker</artifactId>
         <version>2.3.22</version>
+      </dependency>
+
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.5</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>2.0</version>
       </dependency>
 
       <!-- 模板继承、复写处理 -->
@@ -188,6 +199,27 @@
         <jdbc.url>jdbc:mysql://127.0.0.1:3306/easy-skeleton?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true</jdbc.url>
         <jdbc.username>root</jdbc.username>
         <jdbc.password>yuhaibo</jdbc.password>
+        <redis.host.write>127.0.0.1</redis.host.write>
+        <redis.port.write>6379</redis.port.write>
+        <redis.host.read>127.0.0.1</redis.host.read>
+        <redis.port.read>6379</redis.port.read>
+        <logback.folder>/home/yuhaibo/data/tomcat/logs</logback.folder>
+        <log.level>debug</log.level>
+        <ftl.update.delay>0</ftl.update.delay>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>dev-off</id>
+      <properties>
+        <env>dev-off</env>
+        <jdbc.url>jdbc:mysql://127.0.0.1:3306/easy-skeleton?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true</jdbc.url>
+        <jdbc.username>root</jdbc.username>
+        <jdbc.password></jdbc.password>
+        <redis.host.write>pc06.dev.vivo.xyz</redis.host.write>
+        <redis.port.write>3112</redis.port.write>
+        <redis.host.read>pc06.dev.vivo.xyz</redis.host.read>
+        <redis.port.read>3112</redis.port.read>
         <logback.folder>/data/tomcat/logs</logback.folder>
         <log.level>debug</log.level>
         <ftl.update.delay>0</ftl.update.delay>
@@ -201,6 +233,10 @@
         <jdbc.url>jdbc:mysql://127.0.0.1:3306/easy-skeleton?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF8&amp;allowMultiQueries=true</jdbc.url>
         <jdbc.username>root</jdbc.username>
         <jdbc.password></jdbc.password>
+        <redis.host.write>pc06.prd.vivo.xyz</redis.host.write>
+        <redis.port.write>3112</redis.port.write>
+        <redis.host.read>pc06.prd.vivo.xyz</redis.host.read>
+        <redis.port.read>3112</redis.port.read>
         <logback.folder>/data/test/tomcat/logs</logback.folder>
         <log.level>error</log.level>
         <ftl.update.delay>30</ftl.update.delay>

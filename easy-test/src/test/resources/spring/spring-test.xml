@@ -15,6 +15,7 @@
 
     <context:property-placeholder location="classpath*:config/*.properties"/>
 
-    <import resource="classpath*:spring/spring-mybatis.xml"/>
+    <import resource="classpath*:spring/spring-dal-context.xml"/>
+    <import resource="classpath*:spring/spring-redis.xml" />
 
 </beans>

@@ -5,6 +5,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <import resource="classpath*:spring/spring-mvc.xml"/>
-    <import resource="classpath*:spring/spring-mybatis.xml"/>
+    <import resource="classpath*:spring/spring-dal-context.xml"/>
+    <import resource="classpath*:spring/spring-redis.xml" />
 
 </beans>

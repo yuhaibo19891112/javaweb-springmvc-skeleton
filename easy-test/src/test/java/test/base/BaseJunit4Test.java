@@ -1,9 +1,3 @@
-/**  
- *BaseTests.java         2015年7月20日下午2:16:45
- *@Copyright:Copyright © 2014 VIVO Communication Technology Co., Ltd. All rights reserved.
- *@Company:Vivo----http://www.vivo.com.cn/
- * 
- */
 package test.base;
 
 import org.junit.Test;
