@@ -14,6 +14,7 @@
     <module>easy-facade</module>
     <module>easy-integration</module>
     <module>easy-test</module>
+    <module>easy-admin</module>
     <module>easy-web</module>
   </modules>
 
