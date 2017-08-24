@@ -214,9 +214,9 @@
         <jdbc.username>root</jdbc.username>
         <jdbc.password>yuhaibo</jdbc.password>
         <redis.host.write>127.0.0.1</redis.host.write>
-        <redis.port.write>6379</redis.port.write>
+        <redis.port.write>3111</redis.port.write>
         <redis.host.read>127.0.0.1</redis.host.read>
-        <redis.port.read>6379</redis.port.read>
+        <redis.port.read>3112</redis.port.read>
         <logback.folder>/home/yuhaibo/data/tomcat/logs</logback.folder>
         <log.level>debug</log.level>
         <ftl.update.delay>0</ftl.update.delay>
