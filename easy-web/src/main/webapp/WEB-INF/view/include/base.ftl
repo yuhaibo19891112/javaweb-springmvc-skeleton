@@ -13,25 +13,28 @@
         <meta name="description" content='<@block name="description">句容私家车俱乐部</@block>'/>
     </@block>
 
-    <link href="/assets/common_umix/css/common.css" rel="stylesheet">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/common/css/common.css">
     <@block name="css" />
 </head>
 
 <body>
 
-    <header>
-        <div>头</div>
+    <header class="header">
+        <#include "include/header.ftl"/>
     </header>
 
-    <div class="content">
-        <@block name="content" />
+    <div class="container">
+        <@block name="container" />
     </div>
 
-    <footer>
-        <div>尾</div>
+    <footer class="footer">
+        <#include "include/footer.ftl"/>
     </footer>
 
-    <script src="/assets/common_umix/script/lib.js"></script>
+    <script src="/assets/plugins/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <@block name="javascript" />
 
 </body>
