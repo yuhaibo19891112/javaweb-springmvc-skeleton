@@ -1,4 +1,4 @@
-<@override name="title">index</@override>
+<@override name="title">稀风</@override>
 
 <@override name="container">
 <h1>welcome !!</h1>

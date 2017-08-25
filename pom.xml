@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.easy</groupId>
   <artifactId>easy-skeleton</artifactId>
-  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>com.easy Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <packaging>pom</packaging>
 
   <modules>
     <module>easy-dal</module>
@@ -198,10 +198,6 @@
     </dependencies>
   </dependencyManagement>
 
-  <build>
-    <finalName>easy-skeleton</finalName>
-  </build>
-
   <profiles>
     <profile>
       <id>dev</id>
@@ -257,4 +253,36 @@
       </properties>
     </profile>
   </profiles>
+
+  <build>
+    <finalName>easy-skeleton</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <skipTests>true</skipTests>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+
+    <resources>
+      <resource>
+        <directory>${project.basedir}/src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+  </build>
+
 </project>

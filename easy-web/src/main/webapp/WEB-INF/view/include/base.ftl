@@ -8,7 +8,7 @@
     <meta name="renderer" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
     <@block name="seo">
-        <title><@block name="title">句容私家车俱乐部</@block></title>
+        <title><@block name="title">index</@block></title>
         <meta name="keywords" content='<@block name="keywords">句容私家车俱乐部</@block>'/>
         <meta name="description" content='<@block name="description">句容私家车俱乐部</@block>'/>
     </@block>
