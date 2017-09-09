@@ -25,7 +25,7 @@
         <#include "include/header.ftl"/>
     </header>
 
-    <div class="container">
+    <div class="box" style="padding-top: 51px">
         <@block name="container" />
     </div>
 
